@@ -1,0 +1,34 @@
+// Abstracts
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+@import "abstracts/placeholders";
+
+// Base
+@import "base/reset";
+@import "base/typography";
+@import "base/utilities";
+@import "base/animations";
+
+// Components
+@import "components/buttons";
+@import "components/cards";
+@import "components/navbar";
+@import "components/footer";
+@import "components/weather-icons";
+
+// Layout
+@import "layout/grid";
+@import "layout/header";
+@import "layout/main-content";
+@import "layout/footer-layout";
+
+// Pages
+@import "pages/home";
+@import "pages/detail";
+
+// Themes
+@import "themes/weather-theme";
+
+// Vendors
+@import "vendors/bootstrap-overrides";

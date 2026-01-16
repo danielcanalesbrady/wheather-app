@@ -1,0 +1,23 @@
+// ============================================================================
+// Tema: Weather App
+// ============================================================================
+
+.weather-theme {
+  &--day {
+    background: linear-gradient(135deg, #87ceeb, #e0f7ff);
+  }
+
+  &--night {
+    background: linear-gradient(135deg, #0f1c3f, #1e3a8a);
+    color: white;
+
+    .place-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+  }
+
+  &--rainy {
+    background: linear-gradient(135deg, #4a6572, #a3b5c6);
+  }
+}

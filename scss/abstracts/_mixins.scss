@@ -1,0 +1,93 @@
+// ============================================================================
+// Mixins de responsividad
+// ============================================================================
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: $breakpoint-sm) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (min-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (min-width: $breakpoint-lg) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (min-width: $breakpoint-xl) {
+      @content;
+    }
+  } @else if $breakpoint == xxl {
+    @media (min-width: $breakpoint-xxl) {
+      @content;
+    }
+  }
+}
+
+// ============================================================================
+// Mixins de flexbox
+// ============================================================================
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// ============================================================================
+// Mixins de cards (BEM)
+// ============================================================================
+
+@mixin place-card-base {
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $box-shadow-lg;
+  }
+}
+
+@mixin place-card-modifier($weather-type) {
+  @if $weather-type == "sunny" {
+    border-top: 4px solid $color-sunny;
+  } @else if $weather-type == "cloudy" {
+    border-top: 4px solid $color-cloudy;
+  } @else if $weather-type == "rainy" {
+    border-top: 4px solid $color-rainy;
+  }
+}
+
+// ============================================================================
+// Mixins de botones
+// ============================================================================
+
+@mixin button-variant($background, $color) {
+  background-color: $background;
+  color: $color;
+  border: 1px solid darken($background, 5%);
+
+  &:hover {
+    background-color: darken($background, 10%);
+    border-color: darken($background, 15%);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.25rem rgba($background, 0.5);
+  }
+}

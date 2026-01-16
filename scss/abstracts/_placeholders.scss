@@ -1,0 +1,41 @@
+// ============================================================================
+// Placeholders (clases silenciosas)
+// ============================================================================
+
+%card-base {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: $border-radius-md;
+  background-color: white;
+}
+
+%text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+%hover-scale {
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+%responsive-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+%visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

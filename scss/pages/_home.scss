@@ -1,0 +1,37 @@
+// ============================================================================
+// Página: Home
+// ============================================================================
+
+.home-page {
+  padding: $spacing-xl 0;
+
+  &__hero {
+    margin-bottom: $spacing-xxl;
+  }
+
+  &__title-container {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+    @extend %hover-scale;
+  }
+
+  &__title {
+    @extend .weather-app__title;
+    background: linear-gradient(90deg, $color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  &__divider {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, $color-primary, $color-secondary);
+    margin: $spacing-md auto;
+    border-radius: 2px;
+  }
+
+  &__grid {
+    @extend .weather-grid;
+  }
+}

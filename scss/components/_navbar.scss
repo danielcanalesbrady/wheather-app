@@ -1,0 +1,56 @@
+// ============================================================================
+// Componente: Navbar (BEM)
+// ============================================================================
+
+.weather-navbar {
+  background-color: $color-info !important;
+  box-shadow: $box-shadow-sm;
+
+  &__brand {
+    font-weight: 700;
+    font-size: $font-size-lg;
+    color: $color-dark !important;
+
+    &:hover {
+      color: $color-primary !important;
+    }
+  }
+
+  &__nav {
+    margin-left: auto;
+  }
+
+  &__item {
+    margin-right: $spacing-md;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    font-weight: 600;
+    color: $color-dark !important;
+    padding: $spacing-sm $spacing-md !important;
+    border-radius: $border-radius-sm;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: rgba(white, 0.2);
+      color: $color-primary !important;
+    }
+
+    &--active {
+      background-color: rgba(white, 0.3);
+      color: $color-primary !important;
+    }
+  }
+
+  &__toggler {
+    border-color: rgba($color-dark, 0.3);
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
